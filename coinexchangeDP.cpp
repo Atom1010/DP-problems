@@ -31,14 +31,14 @@ int coindp (int n, int a[],int s,vector<int> &dp)
 }
 
 int main() {
-  int n=18;
-  int a[]={1,7,5};
+  int n=18; // N is the Total amount
+  int a[]={1,7,5};  // Types of COINS
   vector<int> dp(n+1,-1);
   dp[0]=0;
   int s=sizeof(a)/sizeof(a[0]);
   int ans=coindp(n,a,s,dp);
-  for(int i=0;i<n+1;i++)
-    cout<<i<<"="<<dp[i]<<" ";
-  //cout<<ans<<endl;
+  //for(int i=0;i<n+1;i++)
+    //cout<<i<<"="<<dp[i]<<" ";
+  cout<<ans<<endl; // ans = No of coins required 
   return 0;
 }
